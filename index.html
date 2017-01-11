@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPManager</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sideBar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navBar">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#" id="title"><span class="title-first">SPF</span> <span class="title-second">Manager</span></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0 searchForm">
+            <input class="form-control mr-sm-2" type="text" placeholder="Rechercher">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+        </form>
+    </div>
+</nav>
+
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="active-menu">
+                <a href="#">
+                   <span class="fa fa-credit-card "></span>  Portefeuille
+                </a>
+            </li>
+            <li>
+                  <a href="#"> <span class="fa fa-sliders"></span> Graphes </a>
+            </li>
+            <li>
+                 <a href="#"> <span class="fa fa-pie-chart"></span>  Configuration </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<script src="js/libs/jquery-3.1.1.slim.min.js"></script>
+<script src="js/libs/tether.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<script>
+    $("#title").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</body>
+
+
+</html>
