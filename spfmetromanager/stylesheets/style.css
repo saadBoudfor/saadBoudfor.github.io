@@ -1,0 +1,72 @@
+/* line 5, ../sass/style.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 9, ../sass/style.scss */
+.page-content {
+  padding-top: 3.125rem;
+  min-height: 100%;
+  height: 100%;
+}
+
+/* line 15, ../sass/style.scss */
+.sidebar {
+  background-color: black;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 20, ../sass/style.scss */
+  #cell-sidebar {
+    flex-basis: 52px;
+  }
+
+  /* line 23, ../sass/style.scss */
+  #cell-content {
+    flex-basis: calc(100% - 52px);
+  }
+}
+/* line 28, ../sass/style.scss */
+.app-bar {
+  background-color: black;
+}
+/* line 31, ../sass/style.scss */
+.app-bar .app-bar-element a {
+  color: white;
+}
+/* line 35, ../sass/style.scss */
+.app-bar .app-bar-element:hover {
+  background-color: black;
+}
+/* line 37, ../sass/style.scss */
+.app-bar .app-bar-element:hover a {
+  color: #318f13;
+}
+/* line 44, ../sass/style.scss */
+.app-bar #exit__button a {
+  color: #318f13;
+  border: #318f13 1px solid;
+  border-radius: 9px 8px 7px 8px;
+  padding: 5px;
+}
+/* line 50, ../sass/style.scss */
+.app-bar #exit__button a:hover {
+  background-color: #318f13;
+  color: white;
+}
+/* line 57, ../sass/style.scss */
+.app-bar #title {
+  background-color: black;
+  color: white;
+  font-size: 1.6em;
+  font-style: oblique;
+  line-height: 54px;
+}
+/* line 63, ../sass/style.scss */
+.app-bar #title i {
+  color: wheat;
+}
+/* line 67, ../sass/style.scss */
+.app-bar #title:hover {
+  color: #38a516;
+}

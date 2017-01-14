@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SPFmanager</title>
+    <link rel="stylesheet" href="stylesheets/libs/metro.min.css">
+    <link rel="stylesheet" href="stylesheets/libs/metro-responsive.css">
+    <link rel="stylesheet" href="stylesheets/libs/metro-icons.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body  class="bg-steel">
+
+<header class="app-bar fixed-top" data-role="appbar">
+    <a id="title" href="#" class="app-bar-element branding"><i>SPF</i>manager</a>
+    <ul class="app-bar-menu">
+
+    </ul>
+    <div class="app-bar-element place-right" id="exit__button">
+        <a><span class="mif-enter"></span> Se déconnecter </a>
+    </div>
+
+</header>
+
+
+
+<div class="page-content">
+    <div class="flex-grid no-responsive-future" style="height: 100%;">
+        <div class="row" style="height: 100%">
+            <div class="cell size-x200" id="cell-sidebar" style="background-color: black; height: 100%">
+                <ul class="sidebar">
+                    <li><a href="#">
+                        <span class="mif-apps icon"></span>
+                        <span class="title">all items</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-vpn-publ icon"></span>
+                        <span class="title">websites</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li class="active"><a href="#">
+                        <span class="mif-drive-eta icon"></span>
+                        <span class="title">Virtual machines</span>
+                        <span class="counter">2</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-cloud icon"></span>
+                        <span class="title">Cloud services</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-database icon"></span>
+                        <span class="title">SQL Databases</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-cogs icon"></span>
+                        <span class="title">Automation</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-apps icon"></span>
+                        <span class="title">all items</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="cell auto-size padding20 bg-white" id="cell-content">
+                <h1>SPF manager ready in: </h1>
+                <div class="countdown" data-role="countdown" data-days="7"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="application/javascript" src="js/libs/jquery.min.js"></script>
+<script type="application/javascript" src="js/libs/metro.min.js"></script>
+
+<script>
+
+    $(function(){
+        $('.sidebar').on('click', 'li', function(){
+            if (!$(this).hasClass('active')) {
+                $('.sidebar li').removeClass('active');
+                $(this).addClass('active');
+            }
+        })
+    })
+</script>
+</body>
+</html>
