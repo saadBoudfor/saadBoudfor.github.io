@@ -1,79 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SPF Manager</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sideBar.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>SPFmanager</title>
+    <link rel="stylesheet" href="stylesheets/libs/metro.min.css">
+    <link rel="stylesheet" href="stylesheets/libs/metro-responsive.css">
+    <link rel="stylesheet" href="stylesheets/libs/metro-icons.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<body>
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navBar">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#" id="title"><span class="title-first">SPF</span> <span class="title-second">Manager</span></a>
+<body  class="bg-steel">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        </ul>
-        <form class="form-inline my-2 my-lg-0 searchForm">
-            <input class="form-control mr-sm-2" type="text" placeholder="Rechercher">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-        </form>
-    </div>
-</nav>
+<header class="app-bar fixed-top" data-role="appbar">
+    <a id="title" href="#" class="app-bar-element branding"><i>SPF</i>manager</a>
+    <ul class="app-bar-menu">
 
-
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="active-menu">
-                <a href="#">
-                   <span class="fa fa-credit-card "></span>  Portefeuille
-                </a>
-            </li>
-            <li>
-                  <a href="#"> <span class="fa fa-sliders"></span> Graphes </a>
-            </li>
-            <li>
-                 <a href="#"> <span class="fa fa-pie-chart"></span>  Configuration </a>
-            </li>
-
-        </ul>
+    </ul>
+    <div class="app-bar-element place-right" id="exit__button">
+        <a><span class="mif-enter"></span> Se déconnecter </a>
     </div>
 
-    <div class="main-content">
+</header>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Panel Heading</div>
-            <div class="panel-body">Panel Content</div>
+
+
+<div class="page-content">
+    <div class="flex-grid no-responsive-future" style="height: 100%;">
+        <div class="row" style="height: 100%">
+            <div class="cell size-x200" id="cell-sidebar" style="background-color: black; height: 100%">
+                <ul class="sidebar">
+                    <li><a href="#">
+                        <span class="mif-apps icon"></span>
+                        <span class="title">all items</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-vpn-publ icon"></span>
+                        <span class="title">websites</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li class="active"><a href="#">
+                        <span class="mif-drive-eta icon"></span>
+                        <span class="title">Virtual machines</span>
+                        <span class="counter">2</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-cloud icon"></span>
+                        <span class="title">Cloud services</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-database icon"></span>
+                        <span class="title">SQL Databases</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-cogs icon"></span>
+                        <span class="title">Automation</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-apps icon"></span>
+                        <span class="title">all items</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="cell auto-size padding20 bg-white" id="cell-content">
+                <h1>Bonjour tous le monde</h1>
+            </div>
         </div>
-
     </div>
 </div>
 
 
-<script src="js/libs/jquery-3.1.1.slim.min.js"></script>
-<script src="js/libs/tether.min.js"></script>
-<script src="js/libs/bootstrap.min.js"></script>
+
+
+<script type="application/javascript" src="js/libs/jquery.min.js"></script>
+<script type="application/javascript" src="js/libs/metro.min.js"></script>
 
 <script>
 
-    $("#title").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-
-    });
-
+    $(function(){
+        $('.sidebar').on('click', 'li', function(){
+            if (!$(this).hasClass('active')) {
+                $('.sidebar li').removeClass('active');
+                $(this).addClass('active');
+            }
+        })
+    })
 </script>
 </body>
-
-
 </html>
